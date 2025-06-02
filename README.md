@@ -38,3 +38,15 @@ The first exercise, `helloWorld`, will walk you through the process in-depth.
 ## Debugging
 
 To debug functions, you can run the tests in the Visual Studio Code debugger terminal. You can open this by clicking the "Run and Debug" icon on the left or pressing <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>D</kbd>, then clicking JavaScript Debug Terminal. You will be able to set breakpoints as you would in the Chrome DevTools debugger. You can run `npm test exerciseName.spec.js` to then execute your code up until your breakpoint and step through your code as necessary. **NOTE**: To take advantage of the debugger, you **MUST** run the script in the debugger terminal, not the bash or zsh terminal.
+
+To run specific tests:
+
+```pwsh
+# Single file
+npm test palindromes.spec.js
+# or (will run tests in ...-solution.spec.js as well)
+npm test palindromes
+
+# Single test within a file
+npm test palindromes.spec.js -- -t "unevenly spaced numbers in a string"
+```
